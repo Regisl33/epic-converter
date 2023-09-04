@@ -1,0 +1,37 @@
+//Colors
+$color1: rgb(58, 53, 53);
+$color2: rgb(180, 180, 180);
+$color3: rgb(41, 37, 243);
+$color4: rgb(245, 245, 245);
+
+//Fonts
+@font-face {
+  font-family: "roboto";
+  src: url(./Assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "poppins";
+  src: url(../Assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+$font1: "roboto", sans-serif;
+$font2: "poppinins", sans-serif;
+//Mixins
+@mixin justify($value){
+  display: flex;
+  justify-content: $value;
+  align-items: center;
+}
+//Général settings
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: $font1;
+}
+body{
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}

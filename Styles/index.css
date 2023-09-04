@@ -1,1 +1,28 @@
-/*# sourceMappingURL=index.css.map */
+@font-face {
+  font-family: "roboto";
+  src: url(./Assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "poppins";
+  src: url(../Assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "roboto", sans-serif;
+}
+
+body {
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=index.css.map */

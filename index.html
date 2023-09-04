@@ -9,6 +9,11 @@
 </head>
 <body>
 	<nav class="sidebar" id="sidebar" aria-label="sidebar-nav">
+		<div class="hamburger-menu" id="btnMenu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 		<ul>
 			<li>celsius / farenheit / kelvin</li>
 			<li>cm / pouce</li>
@@ -27,8 +32,29 @@
 		</ul>
 	</nav>
 	<main class="content" id="content">
-		<div id="1st" class="converter 1st">
-			<i class="fa-solid fa-repeat"></i>
+		<div id="celsius" class="converter celsius">
+			<h2>Convert to Celsius</h2>
+			<input type="text" placeholder="farenheit">
+			<input type="text" placeholder="kelvin">
+			<span><i class="fa-solid fa-repeat"></i></span>
+			<button type="submit">Convert</button>
+			<p id="celsiusResult"></p>
+		</div>
+		<div id="farenheit" class="converter farenheit">
+			<h2>Convert to Farenheit</h2>
+			<input type="text" placeholder="celsius">
+			<input type="text" placeholder="kelvin">
+			<span><i class="fa-solid fa-repeat"></i></span>
+			<button type="submit">Convert</button>
+			<p id="farenheitResult"></p>
+		</div>
+		<div id="kelvin" class="converter kelvin">
+			<h2>Convert to kelvin</h2>
+			<input type="text" placeholder="celsius">
+			<input type="text" placeholder="farenheit">
+			<span><i class="fa-solid fa-repeat"></i></span>
+			<button type="submit">Convert</button>
+			<p id="kelvinResult"></p>
 		</div>
 		<div id="2nd" class="converter 2nd"></div>
 		<div id="3rd" class="converter 3rd"></div>
