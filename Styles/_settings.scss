@@ -14,7 +14,7 @@ $color4: rgb(245, 245, 245);
   src: url(../Assets/fonts/Poppins/Poppins-Regular.ttf);
 }
 $font1: "roboto", sans-serif;
-$font2: "poppinins", sans-serif;
+$font2: "poppins", sans-serif;
 //Mixins
 @mixin justify($value){
   display: flex;
@@ -34,4 +34,6 @@ body{
   text-align: center;
   height: 100vh;
   overflow: hidden;
+  background: $color1;
+  color: $color4;
 }

@@ -1,0 +1,44 @@
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 3;
+  background: black;
+
+  // @media screen 1050px 
+  
+  ul{
+    @include justify(space-evenly);
+    height: inherit;
+    margin: 0 auto;
+
+    li{
+      font-size: 1.1rem;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      cursor: pointer;
+      font-family: $font2;
+
+      &::after{
+        content: " ";
+        position: absolute;
+        left: 5%;
+        bottom: -5px;
+        background: $color4;
+        height: 2px;
+        width: 90%;
+        opacity: 0;
+      }
+
+      &:hover{
+        transform: scale(110%);
+      }
+
+      &:hover::after{
+        opacity: 1;
+      }
+    }
+  }
+}
