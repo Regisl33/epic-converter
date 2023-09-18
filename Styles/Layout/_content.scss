@@ -1,5 +1,55 @@
 .content{
   @include justify(center);
   height: 100vh;
-  opacity: 0;
+
+  .converter{
+    background: $color2;
+    color: black;
+    height: 250px;
+    width: 450px;
+    border: solid black 2px;
+    border-radius: 40px;
+    padding: 25px 50px;
+    display: grid;
+    gap: 5px;
+
+    h2{
+      font: bold 1.7rem $font2;
+    }
+
+    input{
+      border: 2px solid $color3;
+      background: none;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 1rem;
+      text-transform: capitalize;
+      width: 70%;
+    }
+
+    .submit{
+      @include justify(space-around);
+
+      span{
+        background: $color3;
+        height: 30px;
+        width: 45px;
+        border: 1px solid black;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        @include justify(center)
+      }
+
+      button{
+        background: $color3;
+        color: white;
+        border: black 1px solid;
+        border-radius: 10px;
+        padding: 5px 15px;
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+    }
+  }
 }

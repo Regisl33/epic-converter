@@ -8,20 +8,24 @@
   z-index: 4;
   opacity: 0;
 
+  @media screen and (max-width: 1200px ) {
+    opacity: 1;
+  }
+
   .hamburger-menu{
     position: absolute;
-    top: 15px;
-    left: 310px;
+    top: 10px;
+    left: 315px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     transition: 0.3s ease;
 
     span{
-      height: 7px;
+      height: 6px;
       width: 55px;
       background: $color4;
-      margin: 3px;
+      margin: 5px;
       border-radius: 10px;
     }
   }
