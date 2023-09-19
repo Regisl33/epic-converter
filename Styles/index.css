@@ -37,43 +37,55 @@ body {
   height: 100vh;
 }
 .content .converter {
-  background: rgb(180, 180, 180);
-  color: black;
+  background: rgb(96, 96, 96);
+  color: white;
+  -webkit-box-shadow: 1px 1px 10px 2px rgba(245, 245, 245, 0.5);
+          box-shadow: 1px 1px 10px 2px rgba(245, 245, 245, 0.5);
   height: 250px;
   width: 450px;
-  border: solid black 2px;
   border-radius: 40px;
   padding: 25px 50px;
   display: grid;
-  gap: 5px;
+  gap: 10px;
+  -webkit-transform: translateX(500px);
+      -ms-transform: translateX(500px);
+          transform: translateX(500px);
+  opacity: 0;
 }
 .content .converter h2 {
   font: bold 1.7rem "poppins", sans-serif;
 }
 .content .converter input {
   border: 2px solid rgb(41, 37, 243);
+  color: white;
   background: none;
   border-radius: 10px;
   padding: 10px;
   font-size: 1rem;
   text-transform: capitalize;
   width: 70%;
+  place-self: center;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.content .converter input:focus {
+  border: 2px solid rgb(80, 77, 255);
 }
 .content .converter .submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 .content .converter .submit span {
   background: rgb(41, 37, 243);
-  height: 30px;
-  width: 45px;
-  border: 1px solid black;
+  height: 43px;
+  width: 70px;
   border-radius: 7px;
   cursor: pointer;
   font-size: 1.2rem;
@@ -86,15 +98,35 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.content .converter .submit span:hover {
+  -webkit-transform: scale(110%);
+      -ms-transform: scale(110%);
+          transform: scale(110%);
+}
+.content .converter .submit span:active {
+  background: rgb(80, 77, 255);
 }
 .content .converter .submit button {
   background: rgb(41, 37, 243);
   color: white;
-  border: black 1px solid;
   border-radius: 10px;
-  padding: 5px 15px;
+  padding: 9px 25px;
   cursor: pointer;
   font-size: 1.2rem;
+  border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.content .converter .submit button:hover {
+  -webkit-transform: scale(110%);
+      -ms-transform: scale(110%);
+          transform: scale(110%);
+}
+.content .converter .submit button:active {
+  background: rgb(80, 77, 255);
 }
 
 .sidebar {
@@ -148,10 +180,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 100px;
-  height: 50vh;
+  height: 40vh;
+  padding: 5px;
 }
 .sidebar ul li {
-  font-size: 1.1rem;
   text-transform: capitalize;
   letter-spacing: 1px;
   cursor: pointer;
@@ -213,11 +245,11 @@ body {
 .navbar ul li::after {
   content: " ";
   position: absolute;
-  left: 5%;
+  left: 2%;
   bottom: -5px;
   background: rgb(245, 245, 245);
   height: 2px;
-  width: 90%;
+  width: 96%;
   opacity: 0;
 }
 .navbar ul li:hover {

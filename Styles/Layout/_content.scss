@@ -4,14 +4,16 @@
 
   .converter{
     background: $color2;
-    color: black;
+    color: white;
+    box-shadow: 1px 1px 10px 2px rgba(245, 245, 245, 0.50);
     height: 250px;
     width: 450px;
-    border: solid black 2px;
     border-radius: 40px;
     padding: 25px 50px;
     display: grid;
-    gap: 5px;
+    gap: 10px;
+    transform: translateX(500px);
+    opacity: 0;
 
     h2{
       font: bold 1.7rem $font2;
@@ -19,36 +21,58 @@
 
     input{
       border: 2px solid $color3;
+      color: white;
       background: none;
       border-radius: 10px;
       padding: 10px;
       font-size: 1rem;
       text-transform: capitalize;
       width: 70%;
+      place-self: center;
+      transition: 0.2s ease;
+
+      &:focus{
+        border: 2px solid $color5;
+      }
     }
 
     .submit{
-      @include justify(space-around);
+      @include justify(space-evenly);
 
       span{
         background: $color3;
-        height: 30px;
-        width: 45px;
-        border: 1px solid black;
+        height: 43px;
+        width: 70px;
         border-radius: 7px;
         cursor: pointer;
         font-size: 1.2rem;
-        @include justify(center)
+        @include justify(center);
+        transition: 0.2s;
+
+        &:hover{
+          transform: scale(110%);
+        }
+        &:active{
+          background: $color5;
+        }
       }
 
       button{
         background: $color3;
         color: white;
-        border: black 1px solid;
         border-radius: 10px;
-        padding: 5px 15px;
+        padding: 9px 25px;
         cursor: pointer;
         font-size: 1.2rem;
+        border: none;
+        transition: 0.2s;
+
+        &:hover{
+          transform: scale(110%);
+        }
+        &:active{
+          background: $color5;
+        }
       }
     }
   }
