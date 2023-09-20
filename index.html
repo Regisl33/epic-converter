@@ -19,23 +19,23 @@
       </div>
       <ul>
         <li>celsius / farenheit / kelvin</li>
-        <li>cm / pouce</li>
-        <li>kilo / livre</li>
+        <li>CM / IN</li>
+        <li>kilograms / pounds</li>
         <li>km / miles</li>
-        <li>ampérage / voltage / resistance</li>
+        <li>amperage / tension / resistance</li>
       </ul>
     </nav>
     <nav class="navbar" id="navbar" aria-label="navbar">
       <ul>
         <li>celsius / farenheit / kelvin</li>
-        <li>cm / pouce</li>
-        <li>kilo / livre</li>
+        <li>CM / IN</li>
+        <li>kilograms / pounds</li>
         <li>km / miles</li>
-        <li>ampérage / voltage / resistance</li>
+        <li>amperage / tension / resistance</li>
       </ul>
     </nav>
     <main class="content" id="content">
-      <div id="celsius" class="converter celsius">
+      <div id="celsius" class="converter">
         <h2>Convert to Celsius</h2>
         <input type="text" placeholder="enter temperature in farenheit" />
         <input type="text" placeholder="enter temperature in kelvin" />
@@ -45,26 +45,110 @@
         </div>
         <p id="celsiusResult"></p>
       </div>
-      <!-- <div id="farenheit" class="converter farenheit">
+      <div id="farenheit" class="converter">
         <h2>Convert to Farenheit</h2>
         <input type="text" placeholder="celsius" />
         <input type="text" placeholder="kelvin" />
-        <span><i class="fa-solid fa-repeat"></i></span>
-        <button type="submit">Convert</button>
+        <div class="submit">
+          <span><i class="fa-solid fa-repeat"></i></span>
+          <button type="submit">Convert</button>
+        </div>
         <p id="farenheitResult"></p>
       </div>
-      <div id="kelvin" class="converter kelvin">
+      <div id="kelvin" class="converter">
         <h2>Convert to kelvin</h2>
         <input type="text" placeholder="celsius" />
         <input type="text" placeholder="farenheit" />
-        <span><i class="fa-solid fa-repeat"></i></span>
-        <button type="submit">Convert</button>
+        <div class="submit">
+          <span><i class="fa-solid fa-repeat"></i></span>
+          <button type="submit">Convert</button>
+        </div>
         <p id="kelvinResult"></p>
-      </div> -->
-      <!-- <div id="2nd" class="converter 2nd"></div>
-      <div id="3rd" class="converter 3rd"></div>
-      <div id="4th" class="converter 4th"></div>
-      <div id="5ft" class="converter 5ft"></div> -->
+      </div>
+      <div id="cm" class="converter">
+        <h2>Convert to CM</h2>
+        <input type="text" placeholder="Inches" />
+        <div class="submit">
+          <span><i class="fa-solid fa-repeat"></i></span>
+          <button type="submit">Convert</button>
+        </div>
+        <p id="cmResult"></p>
+      </div>
+      <div id="in" class="converter">
+        <h2>Convert to Inches</h2>
+        <input type="text" placeholder="CM" />
+        <div class="submit">
+          <span><i class="fa-solid fa-repeat"></i></span>
+          <button type="submit">Convert</button>
+        </div>
+        <p id="inResult"></p>
+      </div>
+      <div id="kg" class="converter">
+        <h2>Convert to Kilograms</h2>
+        <input type="text" placeholder="Lbs" />
+        <div class="submit">
+          <span><i class="fa-solid fa-repeat"></i></span>
+          <button type="submit">Convert</button>
+        </div>
+        <p id="kgResult"></p>
+      </div>
+      <div id="lbs" class="converter">
+        <h2>Convert to Pounds</h2>
+        <input type="text" placeholder="Kg" />
+        <div class="submit">
+          <span><i class="fa-solid fa-repeat"></i></span>
+          <button type="submit">Convert</button>
+        </div>
+        <p id="lbsResult"></p>
+      </div>
+      <div id="km" class="converter">
+        <h2>Convert to KM</h2>
+        <input type="text" placeholder="Miles" />
+        <div class="submit">
+          <span><i class="fa-solid fa-repeat"></i></span>
+          <button type="submit">Convert</button>
+        </div>
+        <p id="kmResult"></p>
+      </div>
+      <div id="miles" class="converter">
+        <h2>Convert to Miles</h2>
+        <input type="text" placeholder="KM" />
+        <div class="submit">
+          <span><i class="fa-solid fa-repeat"></i></span>
+          <button type="submit">Convert</button>
+        </div>
+        <p id="milesResult"></p>
+      </div>
+      <div id="amperage" class="converter">
+        <h2>Find the Amperage</h2>
+        <input type="text" placeholder="enter your tension" />
+        <input type="text" placeholder="enter your resistance" />
+        <div class="submit">
+          <span><i class="fa-solid fa-repeat"></i></span>
+          <button type="submit">Convert</button>
+        </div>
+        <p id="amperageResult"></p>
+      </div>
+      <div id="tension" class="converter">
+        <h2>Find the Tension</h2>
+        <input type="text" placeholder="enter your amperage" />
+        <input type="text" placeholder="enter your resistance" />
+        <div class="submit">
+          <span><i class="fa-solid fa-repeat"></i></span>
+          <button type="submit">Convert</button>
+        </div>
+        <p id="tensionResult"></p>
+      </div>
+      <div id="resistance" class="converter">
+        <h2>Find the Resistance</h2>
+        <input type="text" placeholder="enter your amperage" />
+        <input type="text" placeholder="enter your tension" />
+        <div class="submit">
+          <span><i class="fa-solid fa-repeat"></i></span>
+          <button type="submit">Convert</button>
+        </div>
+        <p id="resistanceResult"></p>
+      </div>
     </main>
     <script src="index.js"></script>
   </body>
