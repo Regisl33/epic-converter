@@ -22,6 +22,10 @@ $font2: "poppins", sans-serif;
   justify-content: $value;
   align-items: center;
 }
+@keyframes entrance{
+  0%{transform: translate(500px);}
+  100%{transform: translate(0px);}
+}
 //Général settings
 *{
   margin: 0;
@@ -37,4 +41,9 @@ body{
   overflow: hidden;
   background: $color1;
   color: $color4;
+}
+.active{
+  display: grid !important;
+  opacity: 1 !important;
+  animation: entrance ease-in-out 1s forwards;
 }

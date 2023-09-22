@@ -10,10 +10,11 @@
     width: 450px;
     border-radius: 40px;
     padding: 25px 50px;
-    display: grid;
+    display: none;
     gap: 10px;
     transform: translateX(500px);
     opacity: 0;
+    transition: 0.3s ease;
 
     h2{
       font: bold 1.7rem $font2;
