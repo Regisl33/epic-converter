@@ -1,5 +1,6 @@
 //Navigation
 const navigation = document.querySelectorAll("li");
+const nexts = document.querySelectorAll(".nexts");
 const converters = [
   ["celsius", "farenheit", "kelvin"],
   ["cm", "in"],
@@ -8,12 +9,10 @@ const converters = [
   ["amperage", "tension", "resistance"],
 ];
 
-let lastConverter;
 let activeConverter;
 let activeID;
 let counter = 0;
 let link;
-let b;
 
 navigation.forEach((nav) => {
   nav.addEventListener("click", (e) => {
@@ -23,6 +22,16 @@ navigation.forEach((nav) => {
     activeID = converters[link][0];
     activeConverter = document.getElementById(activeID);
     activeConverter.classList.toggle("active");
-    lastConverter = activeConverter;
+    counter = 0;
+  });
+});
+nexts.forEach((next) => {
+  next.addEventListener("click", () => {
+    counter++;
+    if (counter === converters[link].length) counter = 0;
+    document.querySelector(".active").classList.remove("active");
+    activeID = converters[link][counter];
+    activeConverter = document.getElementById(activeID);
+    activeConverter.classList.toggle("active");
   });
 });
