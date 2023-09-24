@@ -1,26 +1,38 @@
 .sidebar{
   position: absolute;
   top: 0;
-  left: -300px;
+  left: -320px;
   height: 100vh;
-  width: 300px;
+  width: 320px;
   background: rgba(41, 37, 243, 0.7);
   z-index: 4;
   opacity: 0;
+  transition: 0.3s ease;
 
   @media screen and (max-width: 1200px ) {
     opacity: 1;
   }
-
   .hamburger-menu{
     position: absolute;
     top: 10px;
-    left: 315px;
+    left: 330px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     transition: 0.3s ease;
 
+    .activate{
+
+      &:nth-child(1){
+        transform: rotate(45deg)translateY(22px);
+      }
+      &:nth-child(2){
+        opacity: 0;
+     }
+      &:nth-child(3){
+      transform: rotate(-45deg)translateY(-22px);
+    }
+  }
     span{
       height: 6px;
       width: 55px;
@@ -28,8 +40,7 @@
       margin: 5px;
       border-radius: 10px;
     }
-  }
-
+}
   ul{
     @include justify(space-around);
     flex-direction: column;
@@ -38,20 +49,20 @@
     padding: 5px;
 
     li{
+      font-size: 1.1rem;
       text-transform: capitalize;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       cursor: pointer;
       font-family: $font2;
-      position: relative;
 
       &::after{
         content: " ";
         position: absolute;
-        left: 5%;
+        left: 2%;
         bottom: -5px;
         background: $color4;
         height: 2px;
-        width: 90%;
+        width: 96%;
         opacity: 0;
       }
 
@@ -63,5 +74,6 @@
         opacity: 1;
       }
     }
+    }
   }
-}
+

@@ -35,3 +35,21 @@ nexts.forEach((next) => {
     activeConverter.classList.toggle("active");
   });
 });
+//sidebar
+const lines = document.querySelectorAll(".lines");
+let sidebarStatus = true;
+
+btnMenu.addEventListener("click", () => {
+  lines.forEach((line) => {
+    line.classList.toggle("activate");
+  });
+  if (sidebarStatus === true) {
+    sidebar.style.left = "0";
+    content.style.opacity = "0.45";
+    sidebarStatus = false;
+  } else {
+    sidebar.style.left = "-320px";
+    content.style.opacity = "1";
+    sidebarStatus = true;
+  }
+});

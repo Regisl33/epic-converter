@@ -161,12 +161,14 @@ body {
 .sidebar {
   position: absolute;
   top: 0;
-  left: -300px;
+  left: -320px;
   height: 100vh;
-  width: 300px;
+  width: 320px;
   background: rgba(41, 37, 243, 0.7);
   z-index: 4;
   opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 @media screen and (max-width: 1200px) {
   .sidebar {
@@ -176,7 +178,7 @@ body {
 .sidebar .hamburger-menu {
   position: absolute;
   top: 10px;
-  left: 315px;
+  left: 330px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,6 +189,19 @@ body {
   cursor: pointer;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+.sidebar .hamburger-menu .activate:nth-child(1) {
+  -webkit-transform: rotate(45deg) translateY(22px);
+      -ms-transform: rotate(45deg) translateY(22px);
+          transform: rotate(45deg) translateY(22px);
+}
+.sidebar .hamburger-menu .activate:nth-child(2) {
+  opacity: 0;
+}
+.sidebar .hamburger-menu .activate:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translateY(-22px);
+      -ms-transform: rotate(-45deg) translateY(-22px);
+          transform: rotate(-45deg) translateY(-22px);
 }
 .sidebar .hamburger-menu span {
   height: 6px;
@@ -213,20 +228,20 @@ body {
   padding: 5px;
 }
 .sidebar ul li {
+  font-size: 1.1rem;
   text-transform: capitalize;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   cursor: pointer;
   font-family: "poppins", sans-serif;
-  position: relative;
 }
 .sidebar ul li::after {
   content: " ";
   position: absolute;
-  left: 5%;
+  left: 2%;
   bottom: -5px;
   background: rgb(245, 245, 245);
   height: 2px;
-  width: 90%;
+  width: 96%;
   opacity: 0;
 }
 .sidebar ul li:hover {
