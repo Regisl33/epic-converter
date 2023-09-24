@@ -53,3 +53,41 @@ btnMenu.addEventListener("click", () => {
     sidebarStatus = true;
   }
 });
+//Conversion logic
+const submit = document.querySelectorAll('button[type="submit"]');
+let x;
+let y;
+
+submit.forEach((button) => {
+  button.addEventListener("click", () => {
+    switch (activeID) {
+      case "celsius":
+        break;
+      case "farenheit":
+        break;
+      case "kelvin":
+        break;
+      case "cm":
+        break;
+      case "in":
+        break;
+      case "kg":
+        break;
+      case "lbs":
+        break;
+      case "km":
+        break;
+      case "miles":
+        break;
+      case "amperage":
+        break;
+      case "tension":
+        break;
+      case "resistance":
+        break;
+
+      default:
+        null;
+    }
+  });
+});
