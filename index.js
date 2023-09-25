@@ -68,6 +68,15 @@ submit.forEach((button) => {
       case "kelvin":
         break;
       case "cm":
+        if (cmInput.value == 0) {
+          alert("You must enter a value!");
+        } else if (cmInput.value.match(/^[0-9]*\.?[0-9]{0,2}$/)) {
+          x = cmInput.value;
+          y = Math.round((x / 0.393701) * 100) / 100;
+          cmResult.textContent = `${cmInput.value} inches is equal to ${y} cm`;
+        } else {
+          alert("You must only enter digits with a maximum of 2 décimals");
+        }
         break;
       case "in":
         break;

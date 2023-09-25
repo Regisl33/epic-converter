@@ -157,6 +157,12 @@ body {
 .content .converter .submit button:active {
   background: rgb(80, 77, 255);
 }
+.content .converter p {
+  margin-top: 5px;
+  font-size: 1.1rem;
+  color: red;
+  text-transform: capitalize;
+}
 
 .sidebar {
   position: absolute;
