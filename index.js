@@ -37,20 +37,30 @@ nexts.forEach((next) => {
 });
 //sidebar
 const lines = document.querySelectorAll(".lines");
-let sidebarStatus = true;
+let sidebarStatus = false;
 
 btnMenu.addEventListener("click", () => {
   lines.forEach((line) => {
     line.classList.toggle("activate");
   });
-  if (sidebarStatus === true) {
-    sidebar.style.left = "0";
-    content.style.opacity = "0.45";
-    sidebarStatus = false;
-  } else {
+  if (sidebarStatus) {
     sidebar.style.left = "-320px";
     content.style.opacity = "1";
+    sidebarStatus = false;
+  } else {
+    sidebar.style.left = "0";
+    content.style.opacity = "0.45";
     sidebarStatus = true;
+  }
+});
+content.addEventListener("click", () => {
+  if (sidebarStatus) {
+    lines.forEach((line) => {
+      line.classList.remove("activate");
+    });
+    sidebar.style.left = "-320px";
+    content.style.opacity = "1";
+    sidebarStatus = false;
   }
 });
 //Conversion logic
@@ -193,12 +203,24 @@ submit.forEach((button) => {
         break;
       case "amperage":
         electric(amperageInput1, amperageInput2);
+        if (valid) {
+          z = Math.round((x / y) * 100) / 100;
+          amperageResult.textContent = `${z} Amps`;
+        }
         break;
       case "tension":
         electric(tensionInput1, tensionInput2);
+        if (valid) {
+          z = Math.round(x * y * 100) / 100;
+          tensionResult.textContent = `${z} Volts`;
+        }
         break;
       case "resistance":
         electric(resistanceInput1, resistanceInput2);
+        if (valid) {
+          z = Math.round((y / x) * 100) / 100;
+          resistanceResult.textContent = `${z} Ohms`;
+        }
         break;
 
       default:

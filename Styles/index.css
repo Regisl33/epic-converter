@@ -65,6 +65,8 @@ body {
 }
 .content .converter {
   background: rgb(96, 96, 96);
+  background: -webkit-gradient(linear, right top, left top, from(rgb(96, 96, 96)), color-stop(40%, rgb(111, 110, 110)));
+  background: linear-gradient(270deg, rgb(96, 96, 96) 0%, rgb(111, 110, 110) 40%);
   color: white;
   -webkit-box-shadow: 1px 1px 10px 2px rgba(245, 245, 245, 0.5);
           box-shadow: 1px 1px 10px 2px rgba(245, 245, 245, 0.5);
@@ -85,7 +87,7 @@ body {
   font: bold 1.7rem "poppins", sans-serif;
 }
 .content .converter input {
-  border: 2px solid rgb(41, 37, 243);
+  border: 2px inset rgb(41, 37, 243);
   color: white;
   background: none;
   border-radius: 10px;
@@ -98,7 +100,7 @@ body {
   transition: 0.2s ease;
 }
 .content .converter input:focus {
-  border: 2px solid rgb(80, 77, 255);
+  border: 2px outset rgb(41, 37, 243);
 }
 .content .converter .submit {
   display: -webkit-box;
@@ -113,6 +115,8 @@ body {
 }
 .content .converter .submit span {
   background: rgb(41, 37, 243);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(41, 37, 243)), color-stop(50%, rgb(80, 77, 255)), to(rgb(77, 173, 255)));
+  background: linear-gradient(90deg, rgb(41, 37, 243) 0%, rgb(80, 77, 255) 50%, rgb(77, 173, 255) 100%);
   height: 43px;
   width: 70px;
   border-radius: 7px;
@@ -136,10 +140,14 @@ body {
           transform: scale(110%);
 }
 .content .converter .submit span:active {
-  background: rgb(80, 77, 255);
+  background: rgb(41, 37, 243);
+  background: -webkit-gradient(linear, right top, left top, from(rgb(41, 37, 243)), color-stop(50%, rgb(80, 77, 255)), to(rgb(77, 173, 255)));
+  background: linear-gradient(270deg, rgb(41, 37, 243) 0%, rgb(80, 77, 255) 50%, rgb(77, 173, 255) 100%);
 }
 .content .converter .submit button {
   background: rgb(41, 37, 243);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(41, 37, 243)), color-stop(50%, rgb(80, 77, 255)), to(rgb(77, 173, 255)));
+  background: linear-gradient(90deg, rgb(41, 37, 243) 0%, rgb(80, 77, 255) 50%, rgb(77, 173, 255) 100%);
   color: white;
   border-radius: 10px;
   padding: 9px 25px;
@@ -155,7 +163,9 @@ body {
           transform: scale(110%);
 }
 .content .converter .submit button:active {
-  background: rgb(80, 77, 255);
+  background: rgb(41, 37, 243);
+  background: -webkit-gradient(linear, right top, left top, from(rgb(41, 37, 243)), color-stop(50%, rgb(80, 77, 255)), to(rgb(77, 173, 255)));
+  background: linear-gradient(270deg, rgb(41, 37, 243) 0%, rgb(80, 77, 255) 50%, rgb(77, 173, 255) 100%);
 }
 .content .converter p {
   margin-top: 5px;
