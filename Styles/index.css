@@ -102,6 +102,21 @@ body {
 .content .converter input:focus {
   border: 2px outset rgb(41, 37, 243);
 }
+.content .converter input::-webkit-input-placeholder {
+  color: whitesmoke;
+}
+.content .converter input::-moz-placeholder {
+  color: whitesmoke;
+}
+.content .converter input:-ms-input-placeholder {
+  color: whitesmoke;
+}
+.content .converter input::-ms-input-placeholder {
+  color: whitesmoke;
+}
+.content .converter input::placeholder {
+  color: whitesmoke;
+}
 .content .converter .submit {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -36,6 +36,9 @@
       &:focus{
         border: 2px outset $color3;
       }
+      &::placeholder{
+        color: whitesmoke;
+      }
     }
 
     .submit{
